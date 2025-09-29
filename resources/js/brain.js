@@ -10,12 +10,9 @@ if(verticalScroll<=550){
     nav.classList.remove('sticky');
 }
 }
-// **********
-window.addEventListener('scroll',
-    throttle(stickToTop,200));
 /* sidebar  */
 const navLink = document.querySelector('.nav-link');
 const checkbox = document.querySelector('#navbar input');
 navLink.addEventListener('click',()=>{
-    checkbox.checked=false;
+    checkbox.checked = false;
 })
