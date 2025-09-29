@@ -1,0 +1,479 @@
+:root{
+    --background-color:crimson;
+    --hover-color:rgb(159, 16, 45);
+    --active-color:rgb(130, 14, 38);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+html{
+    background-color: #fff;
+    color:#444;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+/* utility class */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    padding: 2.5rem 0rem;
+}
+/* ####################### header styling ############################ */
+header{
+    background-image:linear-gradient(to right,rgba(0,0,0,.8),rgba(0,0,0,.6)),url(img/hero-img.webp);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+h1{
+    margin: 0;
+    color:#ccc;
+    margin-bottom:20px;
+    font-weight: 300;
+    word-spacing: 2px;
+    letter-spacing: 7px;
+    font-size: 2.5rem;
+}
+#hero-text{
+    position: absolute;
+    top:38%;
+    left:10%;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background-color .3s,color .3s,border .3s;
+}
+.btn-hungry{
+    background-color: var(--background-color);
+    color:#cccccc;
+    margin-right: 10px;
+}
+.btn-show{
+    border: 1px solid  var(--background-color);
+    color:var(--background-color);
+}
+.btn-hungry:hover{
+    background-color: var(--hover-color);
+}
+.btn-show:hover{
+    background-color: var(--background-color);
+    color:#ccc;
+}
+.btn-hungry:active{
+    background-color: var(--active-color);
+}
+.btn-show:active{
+    background-color: var(--active-color);
+    border-color: var(--active-color);
+}
+
+/* ################# navbar styling ################## */
+nav{
+    display: flex;
+    height: 100px;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    transition: all .3s;
+    z-index: 2;
+    padding: 10px 0px;
+}
+.sticky{
+    position:fixed;
+    background-color: rgba(0,0,0,0.6);
+    box-shadow: 5px 5px 10px gray;
+    height: 70px;
+    backdrop-filter: blur(5px);
+}
+.sticky .logo{
+    width: 3rem;
+}
+.logo{
+    display: block;
+    width: 3.5rem;
+    margin-left: 20px;
+}
+.nav-link{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right:40px;
+    transition: left .5s;
+}
+
+#navbar label{
+    display: none;
+    position:absolute;
+    right:20px ;
+    top:4px;
+    width: 50px;
+    height: 50px;
+    scale: .5;
+    cursor: pointer;
+    z-index: 4;
+}
+#navbar input[type='checkbox']{
+    visibility: hidden;
+    display: none;
+    z-index: 5;
+    position: relative;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+}
+#navbar label span{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color:#fff;
+    color: #000;
+    padding: 0;
+    transition: transform .5s;
+    transform-origin:left ;
+}
+/* sidebar funtionality */
+#navbar input[type=checkbox]:checked ~ .nav-link{
+    left: 30%;
+}
+#navbar input[type=checkbox]:checked ~ label .line1{
+    transform: rotate(40deg);
+}
+#navbar input[type=checkbox]:checked ~ label .line2{
+    transform: translate(200px);
+}
+#navbar input[type=checkbox]:checked ~ label .line3{
+    transform: rotate(-40deg);
+}
+.nav-links{
+    text-decoration: none;
+    color:#fff;
+    margin-left: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    padding-bottom: .3rem;
+    transition: border .3s;
+}
+.nav-links:hover{
+    border-bottom: 2px solid var(--background-color);
+}
+
+/* ################################ Delivery Section ############################## */
+#delivery-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#headingDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width:70%;
+}
+.head2::after{
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: var(--background-color);
+    margin: 0 auto;
+    margin-top: 10px;
+    content: ' ';
+}
+h2{
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.features-container{
+    margin-top: 10px;
+    padding: 10px;
+}
+.box{
+    flex-basis: 270px;
+    padding: 20px;
+}
+h3{
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 110%;
+    text-transform: uppercase;
+}
+p{
+    font-size: 90%;
+    line-height: 1.3rem;
+}
+.box i{
+    color: var(--background-color);    
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* ################## meal section styling ################# */
+#meal-section{
+    padding: 0;
+}
+.meal-showcase{
+    list-style: none;
+    width: 100%;
+}
+.meal-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+.meal-photo img{
+    width: 100%;
+    scale: 1.15;
+    opacity: .7;
+    transition: scale 0.4s,opacity 0.4s;
+}
+.meal-photo img:hover{
+    scale: 1.03;
+    opacity: 1;
+}
+
+/* ############# step section ############## */
+#step-section{
+    background-color:#f4f4f4;
+}
+.step-container{
+    flex-direction: row;
+}
+.step-box{
+    margin-left:3rem;
+}
+.app-img{
+    height: 20rem;
+
+}
+.steps{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.steps div{
+    border: 3px solid var(--background-color);
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    color:var(--background-color);
+    font-size: 1.4rem;
+    text-align: center;
+    padding-top: 3px;
+    margin-right: 20px;
+}
+.btn-img{
+    display: inline-block;
+    margin-top: 80px;
+}
+.btn-img img{
+    height: 4rem;
+    width: auto;
+}
+
+/* ################# city section ############# */
+.city-items i{
+    font-size: .9rem;
+    margin-right: 10px;
+}
+.city-feature{
+    font-size: .9rem;
+}
+.city-items a{
+    text-decoration: none;
+    border-bottom: 1px solid var(--background-color);
+    color: var(--background-color);
+    padding-bottom: 5px;
+    transition: color .5s, border-bottom .5s;
+}
+.city-items a:hover{
+    color: #444;
+    border-bottom: 1px solid transparent;
+}
+.city-items img{
+    width: 100%;
+}
+
+/* #################### testimonial section ####################*/
+#customer-testimonial{
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,.5)), url(img/back-cus.webp);
+    background-size: cover;
+    color:#fff;
+}
+.testimonial-container div{
+    width: 300px;
+    margin: 0 1rem;
+}
+blockquote{
+    font-style: italic;
+    line-height: 1.5rem;
+    margin-top: 20px;
+    font-size: .9rem;
+}
+blockquote::before{
+    content: "\201C";
+    font-size: 4rem;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+cite{
+    display: block;
+    margin-top:1rem ;
+}
+cite img{
+    height: 2.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* ############# plan section ################# */
+#plan-section{
+    background-color: #f4f4f4;
+}
+.plan-card{
+    flex-basis:300px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 5px;
+    padding: 0%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+.plan-card div{
+    margin-bottom:20px;
+    padding: 10px;
+    border-bottom: 1px solid #a8a8a8a8;
+}
+.plan-card div:first-child{
+    padding-bottom: 10px;
+}
+.plan-card div:last-child{
+    margin-top: 5px;
+    border-bottom: none;
+    text-align: center;
+}
+.price-txt{
+    margin-top: 20px;
+    font-size: 3rem;
+    color: var(--background-color);
+    font-weight: 100;
+}
+.price-txt span{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.plan-features ul{
+    list-style: none;
+}
+.plan-features ul li{
+    margin-bottom: 5px;
+}
+.plan-features i{
+    font-size: .7rem;
+    margin-right: 10px;
+}
+
+/* ############ form section ############# */
+form{
+    width: 60%;
+}
+form div{
+    margin-bottom: 20px;
+    display: flex;
+    margin-right: -10%;
+}
+form label{
+    display: inline-block;
+    width: 30%;
+}
+input,
+select,
+textarea{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 7px;
+    width: 60%;
+}
+input[type='checkbox']{
+    width: 20px;
+}
+textarea{
+    height: 200px;
+}
+input[type='submit']{
+    width: auto;
+}
+
+/* ############ footer ############### */
+footer{
+    background-color: #333;
+    font-size: .8rem;
+    padding: 20px;
+}
+footer a{
+    color:#888;
+    text-decoration: none;
+    transition: color .3s;
+}
+footer a:hover{
+    color: #ddd;
+}
+.footer-nav{
+    float: left;
+}
+.social-links{
+    float: right;
+}
+.social-links a{
+    font-size: 1rem;
+}
+.footer-nav ul,
+.social-links ul{
+    margin:10px 0;
+    list-style: none;
+}
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-left: 10px;
+}
+footer div:last-child{
+    clear: both;
+    text-align: center;
+    color:#888;
+    margin-top:80px;
+    font-size: 1.1rem;
+}
+.fb:hover{color:#1877F2;}
+.x:hover{color: #ddd;}
+.ggl:hover{color:#EA4335;}
+.insta:hover{color: #D62976;}

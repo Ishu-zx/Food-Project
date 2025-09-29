@@ -1,0 +1,294 @@
+/* for small desktop 1200px */
+@media screen and (max-width:1200px) {
+    #hero-text {
+        left: 5%;
+    }
+}
+
+/* for small tablets to big tablets from 768px to 1024px */
+@media screen and (max-width:1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    form {
+        width: 70%;
+    }
+}
+
+/* for small phones to small tablets from 480px to 768px */
+@media screen and (max-width:768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        height: 70px;
+        align-items: center;
+    }
+
+    .logo {
+        width: 3rem;
+    }
+    #navbar input[type='checkbox']{display: block;}
+    .nav-link {
+        flex-direction: column;
+        z-index: 3;
+        height: 120vh;
+        width: 70vw;
+        background-color: #333;
+        position: fixed;
+        top: 0px;
+        left: 100%;
+    }
+    #navbar label {
+        display: inline-block;
+    }
+
+    /* sidebar */
+    #navbar input[type=checkbox]:checked~label .line1 {
+        transform-origin: left;
+        transform: rotate(47deg);
+    }
+
+    #navbar input[type=checkbox]:checked~label .line3 {
+        transform-origin: left;
+        transform: rotate(-47deg);
+    }
+
+    .nav-links {
+        display: block;
+        margin: 2rem 0;
+    }
+    .nav-links:first-child{
+        margin-top: 3rem;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    #headingDiv {
+        width: 80%;
+    }
+
+    /* features-section */
+    .features-container {
+        padding: 0;
+    }
+
+    .features-container div {
+        border-bottom: 1px solid #c8c8c8;
+    }
+
+    .box {
+        flex-basis: 200px;
+    }
+
+    .box i {
+        font-size: 2.5rem;
+    }
+
+    /* step-section */
+    .step-container {
+        flex-direction: row;
+    }
+
+    .app-img {
+        height: 18rem;
+    }
+
+    .step-box {
+        margin-top: 2rem;
+        margin-left: 20px;
+    }
+
+    .steps div {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .btn-img {
+        margin-top: 30px;
+    }
+
+    .btn-img img {
+        height: 3rem;
+    }
+
+    /* city-section */
+    .city-items {
+        width: 80vw;
+    }
+
+    .city-feature i {
+        font-size: .8rem;
+    }
+
+    .city-feature {
+        font-size: .7rem;
+    }
+
+    /* testimonial */
+    .testimonial-container div {
+        width: 90%;
+        margin: 1.5rem 0;
+    }
+
+    /* plan-section */
+    .plan-container {
+        flex-direction: row;
+    }
+
+    .price-txt {
+        font-size: 2.5rem;
+    }
+
+    .price-txt span {
+        font-size: .8rem;
+    }
+
+    .plan-card {
+        flex-basis: 240px;
+    }
+
+    .plan-features i {
+        font-size: .7rem;
+    }
+
+    /* footer */
+    footer p {
+        font-size: 80%;
+    }
+}
+
+/* for small phones from 0 to 480px */
+@media screen and (max-width:480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    .nav-link{width: 100vw;}
+    /* sidebar */
+    #navbar input[type=checkbox]:checked ~ .nav-link{
+        left: 0%;
+    }
+    #navbar input[type=checkbox]:checked~label .line1 {
+        transform: rotate(40deg);
+    }
+    #navbar input[type=checkbox]:checked~label .line3 {
+        transform: rotate(-40deg);
+    }
+
+    #hero-text a {
+        margin-top: 10px;
+    }
+
+    /* feature section */
+    #headingDiv {
+        width: 90%;
+    }
+
+    .features-container .box i {
+        font-size: 2rem;
+    }
+
+    /* step section */
+    .step-container {
+        flex-direction: column;
+    }
+
+    .app-img {
+        height: 16rem;
+    }
+
+    .step-box {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .steps div {
+        width: 30px;
+        height: 30px;
+        font-size: .8rem;
+    }
+
+    .step-box div:last-child {
+        text-align: center;
+    }
+
+    .btn-img {
+        margin-top: 20px;
+    }
+
+    .btn-img img {
+        height: 2.5rem;
+    }
+
+    /* plan section */
+    .plan-container {
+        flex-direction: column;
+    }
+
+    .plan-card {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    /* form section */
+    form {
+        width: 90%;
+    }
+
+    form div {
+        margin-right: 0;
+    }
+
+    form label {
+        width: 35%;
+    }
+
+    input,
+    select,
+    textarea {
+        margin-left: 10px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    /* footer */
+    .footer-nav,
+    .social-links {
+        float: none;
+    }
+
+    .footer-nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .social-links li {
+        margin: 0 10px 0 0;
+    }
+
+    footer div:last-child {
+        margin-top: 40px;
+    }
+
+    footer p {
+        font-size: 70%;
+    }
+}
